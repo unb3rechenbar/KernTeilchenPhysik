@@ -1,5 +1,21 @@
 \documentclass{subfiles}
 
 \begin{document}
-    
+
+\subaufgabe{}
+\begin{itemize}
+        \item Ansatz: prozentuelles Zerfallsgesetz (normiert auf die die Gesamtmenge der Uranprobe \textbf{heute}):
+        \begin{align*}
+                H_{235}(t) &= H_{235,0}\cdot\exp(-\frac{\ln(2)}{\tau_{235}}\cdot t),\\
+                H_{238}(t) &= H_{238,0}\cdot\exp(-\frac{\ln(2)}{\tau_{238}}\cdot t).
+        \end{align*}
+        $H$ bezeichnet die jeweilige Häufigkeit, also $H_{235}(T) = \SI{99.28}{\percent}$, $H_{238}(T) = \SI{0.72}{\percent}$, wobei $T=\SI{600e6}{a}$ der Messzeitpunkt ist. Halbwertszeiten: $\tau_{235}=\SI{7.038e8}{a}$, $\tau_{238}=\SI{4.468e9}{a}$, Umgestellt nach ursprünglichen Häufigkeiten:
+        \begin{align*}
+                H_{235,0} &= H_{235}(T)\cdot\exp(\frac{\ln(2)}{\tau_{235}}\cdot t),\\
+                H_{238,0} &= H_{238}(T)\cdot\exp(\frac{\ln(2)}{\tau_{238}}\cdot t).
+        \end{align*}
+        Einsetzen liefert $H_{235,0} = \SI{1.30}{\percent}$, $H_{238,0} = \SI{108.96}{\percent}$.
+        \item Normierung auf damalige Häufigkeit $H'$ gelingt durch Division mit $S=H_{235,0} + H_{238,0}$: \underline{$H'_{235,0}=\SI{1.20}{\percent}$ und $H'_{238,0}=\SI{98.8}{\percent}$}.
+\end{itemize}
+
 \end{document}
