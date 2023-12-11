@@ -18,4 +18,21 @@
         \item Normierung auf damalige Häufigkeit $H'$ gelingt durch Division mit $S=H_{235,0} + H_{238,0}$: \underline{$H'_{235,0}=\SI{1.20}{\percent}$ und $H'_{238,0}=\SI{98.8}{\percent}$}.
 \end{itemize}
 
+\subaufgabe
+\begin{itemize}
+    \item Allgemeiner Ansatz für Anzahl $N_P(t)$ der Bleibatome:
+    \[
+        N_P(t) = N_{U,0} - N_U(t) = N_{U_0}\cdot\nbra{1 - \exp(\frac{\ln(2)}{\tau_U}\cdot t)},
+    \]
+    mit $N_{U}$ als Atomzahl von Uran. Mit den Atommassen $m_P^A,m_U^A$ ist das Gewichtsverhältnis dann:
+    \begin{align*}
+        \frac{m_P}{m_U} &= \frac{m_P^A\cdot N_P(t)}{m_U^A\cdot N_U(t)} = \frac{m_P^A\cdot N_{U,0}\cdot\nbra{1 - \exp(\frac{\ln(2)}{\tau_U}\cdot t)}}{m_U^A\cdot N_{U,0}\cdot\exp(\frac{\ln(2)}{\tau_U}\cdot t)}\\
+        &= \frac{m_P^A\cdot\nbra{1 - \exp(\frac{\ln(2)}{\tau_U}\cdot t)}}{m_U^A\cdot\exp(\frac{\ln(2)}{\tau_U}\cdot t)}
+    \end{align*}}{}
+    \item Für Isotope $238-U$ und $235-U$:
+    \begin{itemize}
+        \item $238-U$: $m_{238} =\SI{238}{u}$, hat $206-Pb$, $m_{206} = \SI{206}{u}$, als Endprodukt der Natürlichen Zerfallsreihe. Einsetzen für $t=T$ ergibt: \underline{$m_{206} / m_{238} = \SI{}$}.
+    \end{itemize}
+\end{itemize}
+
 \end{document}

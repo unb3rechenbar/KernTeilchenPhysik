@@ -1,0 +1,105 @@
+\documentclass{scrartcl}
+
+% -----------------------------------------------------------
+% Pakete
+\usepackage{UniLatexPackage}
+
+% -----------------------------------------------------------
+% Design
+\tcbset{sharp corners=all,boxrule=0mm,breakable, enhanced}
+
+% -----------------------------------------------------------
+% Umgebungen
+%\newtheorem*{bht}{Behauptung}
+%\theoremstyle{definition}
+%\newtheorem*{vor}{Voraussetzungen}
+%\newtheorem*{br}{Berechnung}
+\newtheorem*{rech}{Rechnung}
+
+%\let\oldproof\proof
+%\let\endoldproof\endproof
+%\let\proof\relax
+%\let\endproof\relax
+%\newenvironment{proof}{\begin{tcolorbox}\begin{oldproof}}{\end{oldproof}\end{tcolorbox}}
+
+
+
+\ihead{David Jannack}
+\ohead{\today}
+
+\DeclareMathOperator{\cl}{cl}
+%\newcommand{\endlich}{\textit{endlich}}
+%\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Res}{Res}
+
+
+\begin{document}
+
+\centerline{\Large\textbf{Kern- und Teilchen - Blatt 3}}
+\noindent\makebox[\linewidth]{\rule{11cm}{1pt}}
+
+\aufgabe{}
+\subaufgabe{}
+\begin{itemize}
+        \item Ansatz: Zerfallsformel für \textbf{spezifische} Aktivität
+        \[
+                A^p(t) = A_0^p\cdot\exp(-\frac{\ln(2)}{\tau}\cdot t),        
+        \]
+        mit Halbwertszeit $\tau$. Nach $t$ umgestellt:
+        \[
+                t = -\frac{\tau}{\ln(2)}\cdot\ln(\frac{A(t)^p}{A_0^p}).        
+        \]
+        \item $A_0^p = \SI{0.255}{Bq\per\g}$ und $A^p(T) = A(T) / m(T) = \SI{0.202}{Bq\per \g}$. Dabei ist $T$ der Messzeitpunkt, $m(T)=\SI{2}{\g}$ die Masse der \textbf{Gesamtprobe} und $A(T)=\SI{0.404}{Bq}$. Halbwertszeit von $\,^{14}C$: $\tau=\SI{5730}{a}$. Alles einsetzen liefert \underline{$T=\SI{1926}{a}$}.
+ \end{itemize}
+
+ \subaufgabe{}
+ \begin{itemize}
+        \item Ansatz für $N(t)$: $A(t) = \lambda\cdot N(t)$ mit der Zerfallskonstante $\lambda = \ln(2) / \tau$. Nach $N(t)$ umgestellt:
+        \[
+                N(T) = \frac{\tau}{\ln(2)}\cdot A(T).
+        \]
+        Einsetzen liefert \underline{$N(T) = \num{1.053e11}$}.
+        \item Ansatz für $N_0 = N(0)$: Zerfallsgesetz
+        \[
+                N(t) = N_0\cdot\exp(-\frac{\ln(2)}{\tau}\cdot t).        
+        \]
+        Nach $N_0$ umgestellt:
+        \[
+                N_0 = N(T)\cdot\exp(\frac{\ln(2)}{\tau}\cdot T).
+        \]
+        Einsetzen gibt \underline{$N_0 = \num{1.330e11}$}.
+ \end{itemize}
+
+\subaufgabe{}
+\begin{itemize}
+        \item $N_{12}$ sei Zahl der $\,^{12}C$-Atome, $N_{12}(T) = N(T)$. Ansatz dafür:
+        \[
+                m(T) = m^A_{12}\cdot N_{12} + m^A_{14}\cdot N_{12}(T),
+        \]
+        mit den Atommassen $m^A_{12}=\SI{12}{u}$, $m^A_{14}=\SI{14}{u}$. Nach $N_12$ umgestellt:
+        \[
+                N_{12} = \frac{m(T) - m^A_{14}\cdot N_{12}(T)}{m^A_12}.        
+        \]
+        Einsetzen aller Werte liefert \underline{$N_12 = \num{1.004e23}$}.
+        \item $\,^{12}C$-$\,^{14}C$-Gewebe von lebender Materie ist gegeben durch: \underline{$N_{14}(0) / N_{12} = \SI{1.325e-10}{\percent}$}.
+\end{itemize}
+
+\aufgabe{}
+\subaufgabe{}
+\begin{itemize}
+        \item Ansatz: prozentuelles Zerfallsgesetz (normiert auf die die Gesamtmenge der Uranprobe \textbf{heute}):
+        \begin{align*}
+                H_{235}(t) &= H_{235,0}\cdot\exp(-\frac{\ln(2)}{\tau_{235}}\cdot t),\\
+                H_{238}(t) &= H_{238,0}\cdot\exp(-\frac{\ln(2)}{\tau_{238}}\cdot t).
+        \end{align*}
+        $H$ bezeichnet die jeweilige Häufigkeit, also $H_{235}(T) = \SI{99.28}{\percent}$, $H_{238}(T) = \SI{0.72}{\percent}$, wobei $T=\SI{600e6}{a}$ der Messzeitpunkt ist. Halbwertszeiten: $\tau_{235}=\SI{7.038e8}{a}$, $\tau_{238}=\SI{4.468e9}{a}$, Umgestellt nach ursprünglichen Häufigkeiten:
+        \begin{align*}
+                H_{235,0} &= H_{235}(T)\cdot\exp(\frac{\ln(2)}{\tau_{235}}\cdot t),\\
+                H_{238,0} &= H_{238}(T)\cdot\exp(\frac{\ln(2)}{\tau_{238}}\cdot t).
+        \end{align*}
+        Einsetzen liefert $H_{235,0} = \SI{1.30}{\percent}$, $H_{238,0} = \SI{108.96}{\percent}$.
+        \item Normierung auf damalige Häufigkeit $H'$ gelingt durch Division mit $S=H_{235,0} + H_{238,0}$: \underline{$H'_{235,0}=\SI{1.20}{\percent}$ und $H'_{238,0}=\SI{98.8}{\percent}$}.
+\end{itemize}
+
+\end{document}
