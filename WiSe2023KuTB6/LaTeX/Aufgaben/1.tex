@@ -106,8 +106,18 @@
         \subaufgabe{}
                 Wir finden grafisch $\langle r\rangle$ durch Ablesen der ersten Ableitung nach $Q^2$ bei $Q^2=0$ in Grafik \ref{fig:A1cGrafik}. Der Differenzenquotient ist dort 
                 \[
-                        \Delta := \frac{F_E(\SI{0.02}{GeV/c\squared}) - F_E(\SI{0}{GeV/c\squared})}{\SI{0.02}{GeV/c\squared}} \approx \frac{1 - 0.9}{\SI{0.02}{GeV/c\squared}} = \SI{5}{\per GeV/\per c\squared}.       
+                        \Delta := \frac{G_E(\SI{0.02}{GeV\squared/per c\squared}) - G_E(\SI{0}{GeV\squared\per c\squared})}{\SI{0.02}{GeV\squard\per c\squared}} \approx \frac{1 - 0.9}{\SI{0.02}{GeV\squared\per c\squared}} = -\SI{5}{c\squared\per GeV\squared}.       
                 \]
+
+                \noindent Andererseits gilt für die exakte Ableitung dort:
+                \[
+                        \frac{d}{d(Q^2)}G_E(0) = -\frac{\langle r\rangle^2}{6\hbar^2}.
+                \]
+                \noindent Näherungsweise ergibt sich schließlich
+                \begin{align*}
+                        \Delta \approx -\frac{\langle r\rangle^2}{6\hbar^2}\implies  \langle r\rangle \approx \sqrt{-6\hbar^2\cdot \Delta} = \SI{1.08}{fm}.
+                \end{align*}
+                
 
                 \begin{figure}[H]
                         \centering
@@ -115,6 +125,7 @@
                         \caption{Krasse Graffik alda}
                         \label{fig:A1cGrafik}
                 \end{figure}
+
                 
 
 \end{document}
